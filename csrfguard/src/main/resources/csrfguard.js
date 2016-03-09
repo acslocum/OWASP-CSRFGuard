@@ -332,7 +332,8 @@
 		}
 
 		/** iterate over all elements and injection token **/
-		var all = document.all ? document.all : document.getElementsByTagName('*');
+		var temp = document.all ? document.all : document.getElementsByTagName('*');
+		var all = Array.from(temp);
 		var len = all.length;
 
 		for(var i=0; i<len; i++) {
